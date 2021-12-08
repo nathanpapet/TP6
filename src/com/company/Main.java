@@ -7,7 +7,29 @@ public class Main {
     public static void main(String[] args) {
        //exercice1();
        //exercice2();
-        exercice3();
+        // exercice3();
+
+        Factoriellle f = new Factorielle();
+
+        try{
+            f.calcul(null);
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+        Scanner sc = new Scanner(System.in);
+
+        boolean ok = false;
+
+        while(!ok){
+            String entree = sc.next();
+
+            try{
+                double resultat = f.calcul(entree);
+                System.out.println(resultat);
+            }
+        }
+
     }
 
     public static void exercice1() {
@@ -31,4 +53,5 @@ public class Main {
         }
 
     }
+
 }
